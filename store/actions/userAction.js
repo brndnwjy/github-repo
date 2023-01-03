@@ -30,7 +30,7 @@ export const getUserDetail = (url) => async (dispatch) => {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      dispatch({ type: GET_USER_DETAIL_SUCCESS, payload: data.items });
+      dispatch({ type: GET_USER_DETAIL_SUCCESS, payload: data });
     })
     .catch((err) => {
       dispatch({ type: GET_USER_DETAIL_ERROR, payload: err });

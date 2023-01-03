@@ -1,8 +1,13 @@
-import { GET_REPO_ERROR, GET_REPO_PENDING, GET_REPO_SUCCESS } from "../types";
+import {
+  GET_REPO_PENDING,
+  GET_REPO_SUCCESS,
+  GET_REPO_ERROR,
+  GET_TOTAL_REPO_SUCCESS,
+  GET_TOTAL_REPO_ERROR,
+} from "../types";
 
 const initialState = {
-  reposs: [],
-  total: 0,
+  repo: [],
   isLoading: false,
 };
 
@@ -18,12 +23,25 @@ const repoReducer = (state = initialState, action) => {
     case GET_REPO_SUCCESS:
       return {
         ...state,
-        repos: action.payload,
-        total: action.total,
+        repo: action.payload,
         isLoading: false,
       };
 
     case GET_REPO_ERROR:
+      return {
+        ...state,
+        error: action.payload,
+        isLoading: false,
+      };
+
+    case GET_TOTAL_REPO_SUCCESS:
+      return {
+        ...state,
+        total: action.total,
+        isLoading: false,
+      };
+
+    case GET_TOTAL_REPO_ERROR:
       return {
         ...state,
         error: action.payload,
