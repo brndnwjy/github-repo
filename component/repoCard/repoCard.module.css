@@ -1,0 +1,23 @@
+.card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.card small:first-of-type {
+  margin-right: 15px;
+}
+
+.github-btn {
+  font-size: 14px;
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  padding: 8px;
+}
