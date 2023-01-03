@@ -13,6 +13,7 @@ const Navbar = () => {
   const [search, setSearch] = useState();
 
   const handleSearch = async (e) => {
+    await router.push("/")
     if (e.key === "Enter") {
       console.log(search);
       dispatch(getUser(search));

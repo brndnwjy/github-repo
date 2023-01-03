@@ -31,27 +31,33 @@ const ProfileCard = ({
       <p>{bio}</p>
 
       <div className={styles.infograph}>
-        <FontAwesomeIcon icon={faUser} height={15} />
+        <FontAwesomeIcon icon={faUser} height={15} width={15} />
         <p>
           <span>{follower}</span> Followers &#8226; <span>{following}</span>{" "}
           Following
         </p>
       </div>
 
-      <div className={styles.infograph}>
-        <FontAwesomeIcon icon={faBuilding} height={15} />
-        <p>{company}</p>
-      </div>
+      {company && (
+        <div className={styles.infograph}>
+          <FontAwesomeIcon icon={faBuilding} height={20} width={20} />
+          <p>{company}</p>
+        </div>
+      )}
 
-      <div className={styles.infograph}>
-        <FontAwesomeIcon icon={faLocationPin} height={15} />
-        <p>{location}</p>
-      </div>
+      {location && (
+        <div className={styles.infograph}>
+          <FontAwesomeIcon icon={faLocationPin} height={15} width={15} />
+          <p>{location}</p>
+        </div>
+      )}
 
-      <div className={styles.infograph}>
-        <FontAwesomeIcon icon={faTwitter} height={15} />
-        <p>{twitter}</p>
-      </div>
+      {twitter && (
+        <div className={styles.infograph}>
+          <FontAwesomeIcon icon={faTwitter} height={15} width={15} />
+          <p>{twitter}</p>
+        </div>
+      )}
     </card>
   );
 };

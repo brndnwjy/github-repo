@@ -7,8 +7,11 @@ const RepoCard = ({ name, lang, timestamp, destination }) => {
       <div>
         <h3>{name}</h3>
         <div>
-          <small>{lang}</small>
-          <small>Created at {timestamp}</small>
+          {lang && <small>{lang}</small>}
+          <small>
+            Created at {new Date(timestamp).getMonth()}/
+            {new Date(timestamp).getDate()}/{new Date(timestamp).getFullYear()}
+          </small>
         </div>
       </div>
 
