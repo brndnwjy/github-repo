@@ -1,14 +1,36 @@
 .main {
+  position: relative;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.main::after {
+  content: "";
+  display: block;
+  height: 80px;
+}
+
 .content {
+  min-height: 450px;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 115px;
   padding: 0 50px;
+}
+
+.content h1 {
+  font-size: 48px;
+}
+
+.content2 {
+  width: 100vw;
+  margin-top: 115px;
+  padding: 0 100px;
 }
 
 @media only screen and (max-width: 1200px) {

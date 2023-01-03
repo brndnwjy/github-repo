@@ -88,11 +88,11 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
   background-color: #0d1117;
+  color: rgb(var(--foreground-rgb));
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 
