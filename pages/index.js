@@ -1,24 +1,35 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Navbar from "/component/navbar";
 import Footer from "../component/footer";
 import styles from "../styles/Home.module.css";
-import CardUser from "../component/cardUser";
+import CardUser from "../component/userCard";
+import { getUserDetail } from "../store/actions/userAction";
+import { getRepo } from "../store/actions/repoAction";
 
 const Home = () => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+
   const users = useSelector((state) => state.user.users);
   const total = useSelector((state) => state.user.total);
 
   const [result, setResult] = useState([]);
+  const [selectedUser, setSelectedUser] = "";
 
   useEffect(() => {
     setResult(users);
-    console.log("users");
-    console.log(users);
-    console.log("users");
   }, [users]);
+
+  const selectUser = async (url, name) => {
+    await dispatch(getUserDetail(url));
+    await dispatch(getRepo(name))
+    router.push(`/${name}`);
+  };
 
   return (
     <>
@@ -42,7 +53,7 @@ const Home = () => {
                   key={index}
                   name={item.login}
                   avatar={item.avatar_url}
-                  // action={}
+                  action={() => selectUser(item.url, item.login)}
                 />
               ))}
             </div>
