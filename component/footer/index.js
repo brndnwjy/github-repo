@@ -26,7 +26,7 @@ const Footer = () => {
           Instagram
         </Link>
         <Link href={"/"} className={styles.socmed}>
-          Twitter
+          LinkedIn
         </Link>
       </div>
     </footer>
