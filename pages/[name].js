@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Navbar from "/component/navbar";
@@ -8,7 +7,6 @@ import Footer from "../component/footer";
 import styles from "../styles/Profile.module.css";
 import ProfileCard from "../component/profileCard";
 import RepoCard from "../component/repoCard";
-import { getRepo } from "../store/actions/repoAction";
 
 const Profile = () => {
   const router = useRouter();
@@ -28,8 +26,8 @@ const Profile = () => {
   return (
     <>
       <Head>
-        <title>Guthib</title>
-        <meta name="description" content={`Guthib - ${name}`} />
+        <title>Guthib - {name}</title>
+        <meta name="description" content={`Guthib Profile Detail`} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -49,7 +47,9 @@ const Profile = () => {
             twitter={user?.twitter}
           />
           <div className={styles["repo-list"]}>
-            <h1>{total} Repositories</h1>
+            <h1>
+              Repositories <span className={styles.total}>{total}</span>
+            </h1>
 
             <div className={styles.hl} />
 

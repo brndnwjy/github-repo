@@ -10,7 +10,7 @@ import {
 
 export const getUser = (search) => async (dispatch) => {
   dispatch({ type: GET_USER_PENDING });
-  fetch(`https://api.github.com/search/users?q=${search}&per_page=5`)
+  fetch(`https://api.github.com/search/users?q=${search}&per_page=10`)
     .then((res) => res.json())
     .then((data) => {
       dispatch({ type: GET_USER_SUCCESS, payload: data.items, total: data.total_count });

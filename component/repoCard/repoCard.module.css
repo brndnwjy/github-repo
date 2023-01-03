@@ -10,8 +10,25 @@
   padding: 10px;
 }
 
+.card small {
+  margin-left: 8px;
+}
+
 .card small:first-of-type {
   margin-right: 15px;
+}
+
+.detail > div > div:first-of-type {
+  margin: 5px 0;
+}
+
+.detail > div > div:last-of-type {
+  margin-bottom: 0;
+}
+
+.detail > div > div {
+  display: flex;
+  align-items: center;
 }
 
 .github-btn {

@@ -24,6 +24,21 @@
   padding-left: 50px;
 }
 
+.repo-list h1 {
+  display: flex;
+  align-items: center;
+}
+
+.total {
+  background-color: #30363d;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  border-radius: 13px;
+  margin-left: 5px;
+  padding: 4px;
+}
+
 .hl {
   content: "";
   height: 1px;

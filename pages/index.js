@@ -43,7 +43,7 @@ const Home = () => {
       <main className={styles.main}>
         <Navbar />
 
-        {result.length > 1 ? (
+        {result.length > 0 ? (
           <section className={styles.search}>
             <h2>Found {total} users</h2>
             <div className={styles.hl} />

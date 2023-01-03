@@ -21,7 +21,7 @@ export const getRepo = (name) => async (dispatch) => {
       console.log(err);
     });
 
-  fetch(`https://api.github.com/users/${name}/repos`)
+  fetch(`https://api.github.com/users/${name}/repos?per_page=10&sort=updated_at`)
     .then((res) => res.json())
     .then((data) => {
       dispatch({
