@@ -5,9 +5,11 @@ import Head from "next/head";
 import Navbar from "/component/navbar";
 import Footer from "../component/footer";
 import styles from "../styles/Home.module.css";
+import CardUser from "../component/cardUser";
 
 const Home = () => {
   const users = useSelector((state) => state.user.users);
+  const total = useSelector((state) => state.user.total);
 
   const [result, setResult] = useState([]);
 
@@ -31,10 +33,19 @@ const Home = () => {
         <Navbar />
 
         {result.length > 1 ? (
-          <section className={styles.content2}>
-            {result.map((item, index) => (
-              <p key={index}>{item.login}</p>
-            ))}
+          <section className={styles.search}>
+            <h2>Found {total} users</h2>
+            <div className={styles.hl} />
+            <div className={styles.list}>
+              {result.map((item, index) => (
+                <CardUser
+                  key={index}
+                  name={item.login}
+                  avatar={item.avatar_url}
+                  // action={}
+                />
+              ))}
+            </div>
           </section>
         ) : (
           <section className={styles.content}>

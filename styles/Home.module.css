@@ -27,10 +27,25 @@
   font-size: 48px;
 }
 
-.content2 {
+.search {
   width: 100vw;
-  margin-top: 115px;
+  margin: 115px 0 50px;
   padding: 0 100px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hl {
+  content: "";
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid #30363d;
+  margin: 25px 0 10px;
 }
 
 @media only screen and (max-width: 1200px) {

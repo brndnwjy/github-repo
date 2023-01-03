@@ -13,7 +13,7 @@ export const getUser = (search) => async (dispatch) => {
   fetch(`https://api.github.com/search/users?q=${search}&per_page=5`)
     .then((res) => res.json())
     .then((data) => {
-      dispatch({ type: GET_USER_SUCCESS, payload: data.items });
+      dispatch({ type: GET_USER_SUCCESS, payload: data.items, total: data.total_count });
     })
     .catch((err) => {
       dispatch({ type: GET_USER_ERROR, payload: err });

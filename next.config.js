@@ -10,7 +10,10 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: ["https://avatars.githubusercontent.com"],
+    domains: [
+      "https://avatars.githubusercontent.com",
+      "avatars.githubusercontent.com",
+    ],
   },
 };
 
