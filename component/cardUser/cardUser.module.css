@@ -1,0 +1,33 @@
+.card {
+  width: 49%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile h3 {
+  font-weight: 500;
+}
+
+.ava {
+  border: 1px solid #30363d;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.profile-btn {
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  padding: 5px;
+}
