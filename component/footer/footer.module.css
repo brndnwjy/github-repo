@@ -1,0 +1,56 @@
+.footer {
+  height: 80px;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  background-color: transparent;
+  border-top: 1px solid #30363d;
+  padding: 50px;
+}
+
+.copyright {
+  width: 13%;
+  display: flex;
+  align-items: center;
+}
+
+.copyright h5 {
+  color: #8b949e;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.socmed-group {
+  width: 74%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.socmed {
+  color: #58a6ff;
+}
+
+.socmed:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer {
+    height: 120px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .copyright {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .socmed-group {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
