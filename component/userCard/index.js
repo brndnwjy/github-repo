@@ -1,7 +1,7 @@
 import Image from "next/image";
-import styles from "./cardUser.module.css";
+import styles from "./userCard.module.css";
 
-const CardUser = ({ name, avatar, action }) => {
+const UserCard = ({ name, avatar, action }) => {
   return (
     <card className={styles.card}>
       <div className={styles.profile}>
@@ -22,4 +22,4 @@ const CardUser = ({ name, avatar, action }) => {
   );
 };
 
-export default CardUser;
+export default UserCard;

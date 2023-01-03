@@ -1,10 +1,5 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faLocationPin,
-//   faUser,
-//   faBuilding,
-// } from "@fortawesome/free-regular-svg-icons";
 import {
   faLocationPin,
   faBuilding,

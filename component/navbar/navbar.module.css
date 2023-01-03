@@ -9,6 +9,10 @@
   padding: 0 50px;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .search-field {
   height: 30px;
   width: 15%;

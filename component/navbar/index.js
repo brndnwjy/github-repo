@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import Image from "next/image";
-import styles from "./navbar.module.css";
+import { useRouter } from "next/router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { emptyUser, getUser } from "../../store/actions/userAction";
+import styles from "./navbar.module.css";
 
 const Navbar = () => {
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const [search, setSearch] = useState();
 
@@ -17,19 +20,13 @@ const Navbar = () => {
   };
 
   const emptySearch = async (e) => {
+    router.push("/");
     dispatch(emptyUser());
   };
 
   return (
     <nav className={styles.navbar}>
-      <Image
-        src={"/asset/github.png"}
-        alt="Gihtub Logo"
-        height={40}
-        width={40}
-        onClick={emptySearch}
-      />
-
+      <FontAwesomeIcon icon={faGithub} height={40} className={styles.logo} onClick={emptySearch} />
       <input
         placeholder="Search or jump to..."
         className={styles["search-field"]}
@@ -39,8 +36,6 @@ const Navbar = () => {
         onChange={(e) => setSearch(e.target.value)}
         onKeyDown={handleSearch}
       />
-
-      {/* <button className={styles.slash}>&#47;</button> */}
     </nav>
   );
 };
