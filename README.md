@@ -25,6 +25,7 @@
       </ul>
     </li>
     <li><a href="#screenshoots">Screenshoots</a></li>
+    <li><a href="#References">References</a></li>
     <li><a href="#related-project">Related Projects</a></li>
   </ol>
 </details>
@@ -94,6 +95,20 @@ npm install / npm i
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- References -->
+## References
+Github Rest API Docs :
+https://docs.github.com/en/rest
+
+Using Github API with React :
+https://dev.to/heyvik/using-github-api-with-react-1h03
+
+Next.js Docs Data Fetching : 
+https://nextjs.org/docs/basic-features/data-fetching/overview
+
+How to setup Redux in NextJS :
+https://medium.com/how-to-react/how-to-setup-redux-in-nextjs-5bce0d82b8de
 
 <!-- Related Projects -->
 ## Related Project
