@@ -113,6 +113,6 @@ https://medium.com/how-to-react/how-to-setup-redux-in-nextjs-5bce0d82b8de
 <!-- Related Projects -->
 ## Related Project
 
-:rocket: [`Guthib App Demo`](https://guthibvercel.app)
+:rocket: [`Guthib App Demo`](https://guthib.vercel.app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
